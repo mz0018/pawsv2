@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",               // Use modern JavaScript features
+    "module": "CommonJS",             // Required for Node.js (uses require/import)
+    "moduleResolution": "node",       // Find modules like Node.js does
+    "outDir": "./dist",               // Where compiled JavaScript files will go
+    "rootDir": "./src",               // Your TypeScript source files location
+    "strict": true,                   // Enables strict type-checking (recommended)
+    "esModuleInterop": true           // Makes importing packages easier (like `import express from 'express'`)
+  }
+}
