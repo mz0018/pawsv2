@@ -1,6 +1,7 @@
-React Vite MERN Stack
-tailwind css mobile first approach
-GraphQL, Apollo Express
-zod error handler
-use mongo atlas cluster for db
-notyf for alert
+React Vite MERN Stack,
+tailwind css mobile first approach,
+GraphQL, Apollo Express,
+zod error handler,
+use mongo atlas cluster for db,
+notyf for alert,
+motion framer
