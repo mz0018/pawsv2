@@ -1,11 +1,18 @@
 import { StrictMode, Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+
 import './index.css'
 const App = lazy(() => import('./App.tsx'))
 const Login = lazy(() => import('./pages/Login.tsx'))
 const Signup = lazy(() => import('./pages/Signup.tsx'))
 const BookAppointment = lazy(() => import('./pages/BookAppointment.tsx'))
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000',
+  cache: new InMemoryCache
+})
 
 const loadingFallback = (
     <div className="h-[500px] flex items-center justify-center bg-[#d0ded8]">
@@ -43,6 +50,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ApolloProvider client={client}>
+      <RouterProvider router={router} />
+    </ApolloProvider>
   </StrictMode>,
 )
