@@ -4,4 +4,5 @@ GraphQL, Apollo Express,
 zod error handler,
 use mongo atlas cluster for db,
 notyf for alert,
-motion framer
+motion framer,
+argon2 for hashing password,
